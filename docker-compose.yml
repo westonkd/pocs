@@ -1,0 +1,6 @@
+version: '2'
+services:
+  client-spa:
+    build:
+      context: ./client-spa
+    working_dir: /usr/src/app
