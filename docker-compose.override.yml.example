@@ -1,0 +1,34 @@
+version: '2'
+services:
+  client-spa:
+    volumes:
+      - ./client-spa:/usr/src/app
+    command: yarn run dev --host
+    ports:
+      - "8000:5173"
+    environment:
+      - VIRTUAL_HOST=tenant.client-spa.docker
+      - VIRTUAL_PORT=5173
+  postgres:
+    image: 'postgres:latest'
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: postgres
+  fake-mc:
+    build:
+      context: ./fake-mc
+    environment:
+      - VIRTUAL_HOST=tenant.masteryconnect.docker
+      - VIRTUAL_PORT=3131
+    ports:
+      - '3131:3131'
+    volumes:
+      - ./fake-mc:/docker/app
+      - fake_mc_gems:/usr/local/bundle
+    depends_on:
+      - postgres
+volumes:
+  pgdata:
+  fake_mc_gems:
+

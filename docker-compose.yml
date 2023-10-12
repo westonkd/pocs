@@ -4,3 +4,6 @@ services:
     build:
       context: ./client-spa
     working_dir: /usr/src/app
+  fake-mc:
+    build:
+      context: ./fake-mc

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const Embed = () => {
+const EmbedTwo = () => {
   // TODO: use a legit UUID
   const [messageId, _setMessageId] = useState((Math.random() + 1).toString(36));
 
@@ -53,7 +53,7 @@ const Embed = () => {
 
   return (
     <div style={{width: 600, overflow: 'hidden'}}>
-      <h1>Embedded Application</h1>
+      <h1>Another Embedded Application!</h1>
 
       <h2>ID Token</h2>
       <div>
@@ -79,4 +79,4 @@ const Embed = () => {
   );
 };
 
-export default Embed;
+export default EmbedTwo;
