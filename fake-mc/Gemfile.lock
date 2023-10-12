@@ -179,7 +179,7 @@ GEM
     rake (13.0.6)
     rdoc (6.5.0)
       psych (>= 4.0.0)
-    react-rails (3.1.0)
+    react-rails (3.1.1)
       babel-transpiler (>= 0.7.0)
       connection_pool
       execjs
@@ -245,9 +245,9 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.8)
-  react-rails (= 3.1)
+  react-rails (~> 3.1)
   selenium-webdriver
-  shakapacker (= 7.1)
+  shakapacker (~> 7.1)
   sprockets-rails
   stimulus-rails
   turbo-rails

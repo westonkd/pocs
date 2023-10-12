@@ -1,11 +1,14 @@
 import React from "react"
 import PropTypes from "prop-types"
+import ChakraApp from "./ChakraApp"
 
 const HelloWorld = (props) => {
   return (
-    <React.Fragment>
-      Greetings: {props.greeting}
-    </React.Fragment>
+    <ChakraApp>
+      <React.Fragment>
+        Greetingssss: {props.greeting}
+      </React.Fragment>
+    </ChakraApp>
   )
 }
 
