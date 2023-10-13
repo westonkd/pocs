@@ -2,6 +2,7 @@ import React from "react";
 import ChakraApp from "../ChakraApp";
 import UserProfile from "./sidebar/UserProfile";
 import FavoritePages from "./sidebar/FavoritePages";
+import Applications from "./sidebar/Applications"
 
 import { Flex, Box, Text } from "@chakra-ui/react";
 
@@ -19,6 +20,7 @@ const Profile = () => {
             organization={{ name: "Hogwarts" }}
           />
           <FavoritePages />
+          <Applications />
         </Box>
         <Box flex="1" bg="white" height="100vh" boxShadow="md">
           <Text>Box 3</Text>
