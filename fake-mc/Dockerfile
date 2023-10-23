@@ -28,5 +28,6 @@ ADD . /docker/app
 ARG DEFAULT_PORT 3131
 
 EXPOSE ${DEFAULT_PORT}
+EXPOSE 3035
 
 CMD [ "bundle","exec", "puma", "config.ru"]

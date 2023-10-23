@@ -23,6 +23,7 @@ services:
       - VIRTUAL_PORT=3131
     ports:
       - '3131:3131'
+      - '3035:3035'
     volumes:
       - ./fake-mc:/docker/app
       - fake_mc_gems:/usr/local/bundle

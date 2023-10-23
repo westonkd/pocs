@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Icon } from "@chakra-ui/react";
 import { BsHouseDoor, BsInbox } from "react-icons/bs";
+
+import helloWorld from 'inst-auth';
 
 import { VStack, HStack, Box, Image, Text, Link } from "@chakra-ui/react";
 
 const UserProfile = ({ user, organization }) => {
+  useEffect(() => { console.log(helloWorld()) }, [])
+
   return (
     <VStack align="stretch" p={10}>
       <HStack>
