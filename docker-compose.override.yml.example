@@ -19,7 +19,7 @@ services:
     build:
       context: ./fake-mc
     environment:
-      - VIRTUAL_HOST=tenant.masteryconnect.docker
+      - VIRTUAL_HOST=instructure.docker
       - VIRTUAL_PORT=3131
     ports:
       - '3131:3131'

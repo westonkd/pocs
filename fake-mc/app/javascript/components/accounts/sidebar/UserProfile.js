@@ -1,14 +1,11 @@
 import React, { useEffect } from "react";
 import { Icon } from "@chakra-ui/react";
 import { BsHouseDoor, BsInbox } from "react-icons/bs";
+import { VStack, HStack, Box, Image, Text, Link, Button } from "@chakra-ui/react";
+import { logUserOut } from "inst-auth";
 
-import helloWorld from 'inst-auth';
 
-import { VStack, HStack, Box, Image, Text, Link } from "@chakra-ui/react";
-
-const UserProfile = ({ user, organization }) => {
-  useEffect(() => { console.log(helloWorld()) }, [])
-
+const UserProfile = ({ user, organization, authClient }) => {
   return (
     <VStack align="stretch" p={10}>
       <HStack>
@@ -30,6 +27,8 @@ const UserProfile = ({ user, organization }) => {
           </Box>
         </VStack>
       </HStack>
+
+      <Button marginTop={5} onClick={async () => { logUserOut(authClient, ()=>{}) }}>Log Out</Button>
 
       <Link marginTop={5}>
         <HStack>
